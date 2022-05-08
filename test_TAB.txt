@@ -2,7 +2,7 @@
  SPACE
 	TAB 
 	TAB
- SPACE
+ SPACE 
 END
 		TAB
 	TAB
