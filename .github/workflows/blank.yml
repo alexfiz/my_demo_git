@@ -1,0 +1,13 @@
+name: CI-by-Aleksei-Alekseichik
+
+on: [ pull_request ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Сhecking all changed files
+        uses: tj-actions/changed-files@v19
