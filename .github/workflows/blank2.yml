@@ -19,7 +19,7 @@ jobs:
       - name: tab
         run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
-         grep -P '\t' ${changed_file} > output.log
+         grep -P '\t' ${changed_file} | wc -l > output.log
          done
          
       - name: Upload report
