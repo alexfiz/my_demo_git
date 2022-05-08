@@ -1,8 +1,8 @@
 	TAB
  SPACE
 	TAB 
-	TAB
- SPACE
+	TAB				
+ SPACE 
 END
 		TAB
 	TAB
