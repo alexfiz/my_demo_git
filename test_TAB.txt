@@ -1,13 +1,5 @@
-	TAB	
+	TAB
  SPACE
-	TAB 
-	TAB				
- SPACE 
-END
-		TAB
-	TAB
-			TAB
-					TAB
-	TAB
-			TAB
-		TAB
+ 		2 TABS
+ SPACE
+ 	TAB
