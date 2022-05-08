@@ -6,3 +6,4 @@ END
  1 
 				 x
 						TESTTABSECONDFILE
+		q
