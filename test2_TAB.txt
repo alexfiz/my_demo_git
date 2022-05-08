@@ -7,4 +7,3 @@ END
 				 x
 						TESTTABSECONDFILE
 		q
-		q
