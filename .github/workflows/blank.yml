@@ -8,6 +8,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
 
       - name: Сhecking all changed files
-        uses: tj-actions/changed-files@v19
+        id  : chfile
+        uses: tj-actions/changed-file@v19
+
+      - name: List all added files
+        run : |
+         for file in ${{ steps.chfile.outputs.added_files }}; do
+         grep "$(printf '\t')" $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
+         done
+         
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          path: output.log
