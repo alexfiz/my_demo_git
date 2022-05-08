@@ -19,8 +19,7 @@ jobs:
       - name: tab
         run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
-         echo "Do something with this ${changed_file}."
-         grep -P '\t' $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
+         grep -P '\t' ${changed_file} | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
          done
          
       - name: Upload report
