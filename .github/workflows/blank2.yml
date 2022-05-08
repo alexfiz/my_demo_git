@@ -19,9 +19,8 @@ jobs:
       - name: tab
         run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
-         echo "File ${changed_file} checked, tab found" > TAB.log
+         echo "File ${changed_file} checked, tab found" >> TAB.log
          grep -P '\t' ${changed_file} | sort -n >> TAB.log
-         echo "/\n" >> TAB.log
          done
          
       - name: Upload report
