@@ -19,7 +19,7 @@ jobs:
       - name: List all added files
         run : |
          for file in ${{ steps.changed-files.outputs.added_files }}; do
-         grep "$(printf '\t')" $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
+         grep -P '\t' $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
          done
          
       - name: Upload report
