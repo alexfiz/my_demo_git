@@ -20,7 +20,7 @@ jobs:
         run : |
          for file in ${{ steps.changed-files.outputs.added_files }}; do
          echo "$file was changed"
-         grep "$(printf '\t')" $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log 2>&1
+         grep -P '\t' $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log 2>&1
          done
          
       - name: Upload report
