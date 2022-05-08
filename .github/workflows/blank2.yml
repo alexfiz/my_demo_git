@@ -12,10 +12,12 @@ jobs:
         with:
           fetch-depth: 0 
 
-      - id: files
+      - name: find
+        id: files
         uses: jitterbit/get-changed-files@v1
         
-      - run: |
+      - name: tab
+        run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
          echo "Do something with this ${changed_file}."
          grep -P '\t' $files | cut -f 1 -d ':' | sort | uniq -c | sort -nr | head > output.log
