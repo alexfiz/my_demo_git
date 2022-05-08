@@ -25,4 +25,4 @@ jobs:
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
-          path: output.log
+          path: ${changed_file}_withTAB.log
