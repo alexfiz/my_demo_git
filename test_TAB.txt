@@ -2,3 +2,5 @@
  SPACE
  		2 TABS
  SPACE
+ 			TABS			TABS
+ noTabs
