@@ -1,6 +1,6 @@
 	TAB
  SPACE
-	TAB
+	TAB 
 	TAB
  SPACE
 END
