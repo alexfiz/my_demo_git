@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"C:/Users/alexf/Aleksei_Alekseichik/02.Git.Local","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
