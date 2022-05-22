@@ -1,4 +1,12 @@
 		TAB
+<<<<<<< HEAD
+	TAB
+			TAB
+					TAB
+	TAB
+			TAB
+		TAB
+=======
  SPACE
  		2 TABS
  SPACE
@@ -6,3 +14,4 @@
  noTabs
 			1
 
+>>>>>>> 5e78fbd379f1906f037779fe7653cefc11ffd41f
