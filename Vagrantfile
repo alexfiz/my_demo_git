@@ -51,13 +51,13 @@ Vagrant.configure("2") do |config|
    end
 
  config.vm.define "HOST3" do |deb|
-      deb.vm.box = "debian/bullseye64"
+      deb.vm.box = "ubuntu/bionic64"
       deb.vm.network "forwarded_port", guest: 80, host: 9997
       deb.vm.network "private_network", ip: "192.168.56.52"
       #deb.vm.provision "file", source: "index.html", destination: "~/"
-      deb.vm.provision "file", source: "id_rsa.pub", destination: "~/"
-      deb.vm.provision :shell, :inline => "cat ~/id_rsa.pub >> ~/.ssh/authorized_keys", run: "always"
-      deb.vm.hostname = "Debian11be64"
+      #deb.vm.provision "file", source: "id_rsa.pub", destination: "~/"
+      #deb.vm.provision :shell, :inline => "cat ~/id_rsa.pub >> ~/.ssh/authorized_keys", run: "always"
+      deb.vm.hostname = "ubuntubionic64"
       deb.vm.provider "virtualbox" do |vb|
         vb.gui = false
         vb.memory = "1024"
