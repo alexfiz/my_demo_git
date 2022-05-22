@@ -2,7 +2,7 @@ name: my workflow
 on:
   push:
     branches:
-      - main
+      - second
 jobs:
   build:
     runs-on: ubuntu-latest
