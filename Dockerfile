@@ -1,3 +1,3 @@
 FROM python:3-alpine
-COPY listener.py /test/listener.py
-CMD ["python","/test/listener.py"]
+COPY ind.html /test/ind.html
+#CMD ["python","/test/listener.py"]
