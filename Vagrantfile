@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
    end
 
  config.vm.define "HOST3" do |deb|
-      deb.vm.box = "ubuntu/bionic64"
+      deb.vm.box = "bento/ubuntu-20.04"
       deb.vm.network "forwarded_port", guest: 80, host: 9997
       deb.vm.network "private_network", ip: "192.168.56.52"
       #deb.vm.provision "file", source: "index.html", destination: "~/"
