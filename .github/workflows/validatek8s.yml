@@ -1,0 +1,17 @@
+name: Push
+
+on:
+  push:
+    branches:
+      - second
+
+jobs:
+  validation:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: validate manifests in dir1 
+        uses: makocchi-git/actions-k8s-manifests-validate-kubeval@1.0.0
+        with:
+          files: manifesttest/
+          token: ${{ secrets.GIT_TOKEN }}
