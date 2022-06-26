@@ -27,3 +27,17 @@ jobs:
       uses: instrumenta/kubeval-action@master
       with: 
        files: ${{matrix.k8s-files}}
+  notification:
+    needs: test-files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: prometheus
+        SLACK_COLOR: ${{ job.status }} 
+        SLACK_ICON: https://github.com/rtCamp.png?size=48
+        SLACK_MESSAGE: 'Post Content :rocket:'
+        SLACK_TITLE: Kubeval checks
+        SLACK_USERNAME: GitHub
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
