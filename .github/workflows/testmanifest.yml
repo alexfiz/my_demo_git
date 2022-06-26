@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   find-k8s-files:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     outputs:
       files: ${{ env.files }}
     steps:
@@ -16,7 +16,7 @@ jobs:
               echo "files=`echo -n $FILES`" >> $GITHUB_ENV
   test-files:
     needs: find-k8s-files
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         k8s-files: ${{fromJson(needs.find-k8s-files.outputs.files)}}
